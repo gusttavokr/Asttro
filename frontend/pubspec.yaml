@@ -19,6 +19,8 @@ dev_dependencies:
 
   flutter_lints: ^5.0.0
   flutter_native_splash: ^2.4.6
+  flutter_launcher_icons: ^0.14.4
+
 
 flutter:
   uses-material-design: true
@@ -43,3 +45,9 @@ flutter_native_splash:
 
     # Ícone central sem fundo
     image: assets/logo_1152.png
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  image_path: "assets/logo_1024.png"
+  adaptive_icon_foreground: "assets/logo_1024.png"
+  adaptive_icon_background: "#061637"
