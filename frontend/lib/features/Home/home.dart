@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:asttro/core/widgets/background.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,8 +8,22 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: const Center(
-        child: Text('Tela inicial do app'),
+      body: Stack(
+        children: [
+          const AppBackground(),
+          const SafeArea(
+            child: Padding(
+              padding: EdgeInsets.all(24),
+              child: Text(
+                'Você tem Tarefas Pendentes',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
