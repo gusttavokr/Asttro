@@ -20,13 +20,29 @@ class HomePage extends StatelessWidget {
             const SafeArea(
               child: Padding(
                 padding: EdgeInsets.all(24),
-                child: Text(
-                  'Você tem Tarefas Pendentes',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 24,
-                  ),
-                ),
+
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Olá, Gustavo!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 14,
+                      ),
+                    ),
+                    SizedBox(height: 8),
+                    Text(
+                      'Suas tarefas pendentes:',
+                      style: TextStyle(
+                        fontWeight: FontWeight(700),
+                        color: Colors.white,
+                        fontSize: 28,
+                      ),
+                    ),
+                  ],
+                )
+
               ),
             ),
           ],
