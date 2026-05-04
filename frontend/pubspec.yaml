@@ -41,12 +41,12 @@ flutter_native_splash:
 
   fullscreen: true
   # Splash padrão (Android < 12 e iOS)
-  color: "#061637"
+  color: "#0D0D1B"
   image: assets/logo/logo_512.png
 
   android_12:
     # Fundo do splash
-    color: "#061637"
+    color: "#0D0D1B"
 
     # Ícone central sem fundo
     image: assets/logo/logo_1152.png
