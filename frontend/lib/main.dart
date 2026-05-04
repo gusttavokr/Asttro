@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Asttro',
       theme: ThemeData(
+        fontFamily: 'Inter',
         useMaterial3: true,
       ),
       home: const HomePage(),

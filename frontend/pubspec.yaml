@@ -28,6 +28,11 @@ flutter:
   assets:
     - assets/
     - assets/
+  
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: assets/fonts/Inter-VariableFont_opsz,wght.ttf
 
 flutter_native_splash:
   android: true
@@ -37,17 +42,17 @@ flutter_native_splash:
   fullscreen: true
   # Splash padrão (Android < 12 e iOS)
   color: "#061637"
-  image: assets/logo_512.png
+  image: assets/logo/logo_512.png
 
   android_12:
     # Fundo do splash
     color: "#061637"
 
     # Ícone central sem fundo
-    image: assets/logo_1152.png
+    image: assets/logo/logo_1152.png
 
 flutter_launcher_icons:
   android: "launcher_icon"
-  image_path: "assets/logo_1024.png"
-  adaptive_icon_foreground: "assets/logo_1024.png"
+  image_path: "assets/logo/logo_1024.png"
+  adaptive_icon_foreground: "assets/logo/logo_1024.png"
   adaptive_icon_background: "#061637"
