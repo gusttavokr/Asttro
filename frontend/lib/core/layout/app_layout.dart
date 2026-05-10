@@ -25,7 +25,6 @@ class AppLayout extends StatelessWidget {
           const AppBackground(),
           
           SafeArea(
-            // Envolvendo o miolo do app no LayoutBuilder
             child: LayoutBuilder(
               builder: (context, constraints) {
 
