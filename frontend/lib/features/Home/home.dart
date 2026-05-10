@@ -8,7 +8,7 @@
     Widget build(BuildContext context) {
       return AppLayout(
         breadcrumb: 'Olá, Gustavo 👋',
-        title: 'Home',
+        title: 'Suas tarefas pendentes:',
         currentIndex: 0,
 
         child: ListView(

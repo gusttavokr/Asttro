@@ -23,59 +23,74 @@ class AppLayout extends StatelessWidget {
       body: Stack(
         children: [
           const AppBackground(),
+          
           SafeArea(
-            child: Column(
-              children: [
-                // SEARCH BAR
-                // Padding(
-                //   padding: const EdgeInsets.all(16),
-                //   child: const SearchBarApp(),
-                // ),
+            // Envolvendo o miolo do app no LayoutBuilder
+            child: LayoutBuilder(
+              builder: (context, constraints) {
 
-                // BREADCRUMB
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      breadcrumb,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 14,
-                      ),
+                double maxWidth = constraints.maxWidth > 500 ? 500 : constraints.maxWidth;
+
+                return Center( 
+                  child: SizedBox(
+                    width: maxWidth, 
+                    child: Column(
+                      children: [
+                        // SEARCH BAR
+                        const Padding(
+                          padding: EdgeInsets.all(16),
+                          child: SearchBarApp(),
+                        ),
+
+                        // BREADCRUMB
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              breadcrumb,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 8),
+
+                        // TÍTULO
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: Text(
+                              title,
+                              style: const TextStyle(
+                                fontSize: 28,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+
+                        const SizedBox(height: 20),
+
+                        // CONTEÚDO
+                        Expanded(
+                          child: child,
+                        ),
+                      ],
                     ),
                   ),
-                ),
-
-                const SizedBox(height: 8),
-
-                // TÍTULO
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  child: Align(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      title,
-                      style: const TextStyle(
-                        fontSize: 28,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-
-                const SizedBox(height: 20),
-
-                // CONTEÚDO
-                Expanded(
-                  child: child,
-                ),
-              ],
+                );
+              },
             ),
           ),
         ],
       ),
     );
   }
+  
 }
